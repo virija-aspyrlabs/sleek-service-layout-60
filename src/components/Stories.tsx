@@ -62,11 +62,11 @@ const Stories = () => {
     <section id="stories" className="py-24">
       <div className="section-container">
         <div ref={sectionRef} className="text-center mb-16 opacity-0">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wide mb-4">
+          <span className="inline-block py-1 px-3 rounded-full bg-aspyr-green/10 text-aspyr-green text-xs font-medium tracking-wide mb-4">
             Case Studies
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Success Stories
+            Stories
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
             Real-world examples of how our technology solutions have helped businesses
@@ -82,7 +82,7 @@ const Stories = () => {
               className="group relative bg-white rounded-xl overflow-hidden shadow-md opacity-0 transition-all duration-300 hover:shadow-xl"
             >
               <div className="aspect-[16/9] relative overflow-hidden">
-                <div className="absolute inset-0 bg-primary/50 transition-opacity group-hover:opacity-40 opacity-0 z-10"></div>
+                <div className="absolute inset-0 bg-aspyr-green/50 transition-opacity group-hover:opacity-40 opacity-0 z-10"></div>
                 <img
                   src={study.image}
                   alt={study.title}
@@ -90,16 +90,16 @@ const Stories = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                <div className="text-xs font-semibold text-aspyr-green uppercase tracking-wider mb-2">
                   {study.category}
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-aspyr-green transition-colors">
                   {study.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {study.description}
                 </p>
-                <div className="flex items-center text-primary font-medium text-sm transition-all opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0">
+                <div className="flex items-center text-aspyr-green font-medium text-sm transition-all opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0">
                   Read case study <ArrowRight className="ml-1 h-4 w-4" />
                 </div>
               </div>

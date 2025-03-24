@@ -45,6 +45,10 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Aspyr specific colors */
+    --aspyr-green: 134 49% 39%;
+    --aspyr-light-green: 84 51% 51%;
   }
 }
 
@@ -115,5 +119,10 @@
   .no-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Gradient text for Aspyr branding */
+  .text-gradient-aspyr {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-aspyr-green to-aspyr-light-green;
   }
 }

@@ -26,17 +26,13 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="text-xl font-semibold text-gray-900">
-              <span className="sr-only">Company Logo</span>
-              <svg 
-                className="h-8 w-auto" 
-                viewBox="0 0 40 40" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" />
-                <path d="M15 15L25 25M15 25L25 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
+            <a href="#" className="text-xl font-semibold flex items-center">
+              <span className="sr-only">Aspyr Technology Labs</span>
+              <img 
+                src="/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png" 
+                alt="Aspyr Technology Labs Logo" 
+                className="h-12 w-auto"
+              />
             </a>
           </div>
 
@@ -46,7 +42,7 @@ const Header = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-primary after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                className="text-sm font-medium text-gray-900 hover:text-aspyr-green transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-aspyr-green after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 {item}
               </a>
@@ -77,7 +73,7 @@ const Header = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-aspyr-green"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item}
