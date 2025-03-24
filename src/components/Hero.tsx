@@ -32,6 +32,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-aspyr-green/10 backdrop-blur-[2px]"></div>
       </div>
 
+      {/* Decorative circles */}
+      <div className="absolute top-1/4 -left-12 w-48 h-48 bg-aspyr-green/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float animate-delay-200"></div>
+
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png')] bg-center opacity-5"></div>
+
       {/* Content */}
       <div className="section-container relative z-10 mt-16">
         <div className="max-w-3xl mx-auto text-center">
@@ -66,6 +73,22 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Tech pattern overlays */}
+      <div className="absolute left-0 bottom-0 w-64 h-64 opacity-10">
+        <img 
+          src="/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png" 
+          alt="" 
+          className="w-full h-full object-contain opacity-50 animate-float"
+        />
+      </div>
+      <div className="absolute right-0 top-0 w-48 h-48 opacity-10 rotate-180">
+        <img 
+          src="/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png" 
+          alt="" 
+          className="w-full h-full object-contain opacity-50 animate-float animate-delay-200"
+        />
       </div>
 
       {/* Scroll indicator */}
