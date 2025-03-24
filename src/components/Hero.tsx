@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -32,36 +33,44 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-aspyr-green/10 backdrop-blur-[2px]"></div>
       </div>
 
-      {/* Decorative circles */}
-      <div className="absolute top-1/4 -left-12 w-48 h-48 bg-aspyr-green/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-1/4 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float animate-delay-200"></div>
+      {/* Subtle decorative elements */}
+      <div className="absolute top-1/4 -left-12 w-56 h-56 bg-aspyr-green/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 -right-12 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float animate-delay-200"></div>
 
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[url('/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png')] bg-center opacity-5"></div>
 
-      {/* Floating technology elements */}
-      <div className="absolute left-[15%] top-[25%] w-32 h-32 animate-float animate-delay-100 opacity-70">
-        <div className="w-full h-full rounded-lg glass-card p-3 rotate-12">
-          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
-               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=500)' }}>
-          </div>
-        </div>
+      {/* Feature cards */}
+      <div className="absolute left-10 top-1/3 transform -translate-y-1/2 z-10 max-w-[280px] hidden lg:block animate-fade-in-up animate-delay-300">
+        <Card className="bg-white/90 backdrop-blur border-aspyr-green/20 overflow-hidden shadow-lg">
+          <CardContent className="p-4">
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 bg-aspyr-green/20 rounded-full flex items-center justify-center">
+                <div className="h-6 w-6 bg-aspyr-green rounded-full"></div>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-800">Data-Driven Solutions</h4>
+                <p className="text-sm text-gray-600">Modern analytics for informed decision-making</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
-      
-      <div className="absolute right-[20%] top-[20%] w-28 h-28 animate-float animate-delay-300 opacity-70">
-        <div className="w-full h-full rounded-lg glass-card p-3 -rotate-6">
-          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
-               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=500)' }}>
-          </div>
-        </div>
-      </div>
-      
-      <div className="absolute right-[30%] bottom-[20%] w-40 h-40 animate-float animate-delay-200 opacity-70">
-        <div className="w-full h-full rounded-lg glass-card p-3 rotate-6">
-          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
-               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=500)' }}>
-          </div>
-        </div>
+
+      <div className="absolute right-10 top-2/3 transform -translate-y-1/2 z-10 max-w-[280px] hidden lg:block animate-fade-in-up animate-delay-400">
+        <Card className="bg-white/90 backdrop-blur border-primary/20 overflow-hidden shadow-lg">
+          <CardContent className="p-4">
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center">
+                <div className="h-6 w-6 bg-primary rounded-full"></div>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-800">Enterprise Excellence</h4>
+                <p className="text-sm text-gray-600">Scalable architecture for growing businesses</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Content */}
