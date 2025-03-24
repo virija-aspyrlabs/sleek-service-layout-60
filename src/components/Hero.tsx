@@ -39,6 +39,31 @@ const Hero = () => {
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[url('/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png')] bg-center opacity-5"></div>
 
+      {/* Floating technology elements */}
+      <div className="absolute left-[15%] top-[25%] w-32 h-32 animate-float animate-delay-100 opacity-70">
+        <div className="w-full h-full rounded-lg glass-card p-3 rotate-12">
+          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
+               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=500)' }}>
+          </div>
+        </div>
+      </div>
+      
+      <div className="absolute right-[20%] top-[20%] w-28 h-28 animate-float animate-delay-300 opacity-70">
+        <div className="w-full h-full rounded-lg glass-card p-3 -rotate-6">
+          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
+               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=500)' }}>
+          </div>
+        </div>
+      </div>
+      
+      <div className="absolute right-[30%] bottom-[20%] w-40 h-40 animate-float animate-delay-200 opacity-70">
+        <div className="w-full h-full rounded-lg glass-card p-3 rotate-6">
+          <div className="w-full h-full bg-contain bg-center bg-no-repeat" 
+               style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=500)' }}>
+          </div>
+        </div>
+      </div>
+
       {/* Content */}
       <div className="section-container relative z-10 mt-16">
         <div className="max-w-3xl mx-auto text-center">
