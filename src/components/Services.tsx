@@ -4,22 +4,24 @@ const products = [
   {
     title: 'Automation',
     description: 'Streamline your operations with intelligent automation solutions that reduce manual tasks and boost efficiency.',
-    imageUrl: 'https://source.unsplash.com/400x300/?automation,technology'
+    imageUrl: './ai.png'
   },
   {
     title: 'Data and AI',
     description: 'Harness the power of your data with advanced analytics and AI-driven insights that fuel better decision-making.',
-    imageUrl: 'https://source.unsplash.com/400x300/?data,ai'
+    imageUrl: '/data.png'
   },
   {
     title: 'Enterprise Solutions & Modern Architecture',
-    description: 'Future-proof your business with scalable, resilient enterprise architecture designed for the digital age.',
-    imageUrl: 'https://source.unsplash.com/400x300/?enterprise,architecture'
+    description: 'Future-proof your business with scalable for the digital age.',
+    // description: 'Future-proof your business with scalable, resilient enterprise architecture designed for the digital age.',
+    imageUrl: '/enterprise.png'
   },
   {
     title: 'Legacy System Modernization',
     description: 'Transform outdated systems into agile, cloud-native applications without disrupting your core business.',
-    imageUrl: 'https://source.unsplash.com/400x300/?legacy,modernization'
+    // description: 'Transform outdated systems into agile, cloud-native applications without disrupting your core business.',
+    imageUrl: '/legacy.png'
   },
 ];
 
@@ -69,7 +71,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-16 ">
           {products.map((product, index) => (
             <div
               key={product.title}
