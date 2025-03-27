@@ -16,37 +16,54 @@ const Header = () => {
   }, []);
 
   return (
-    <header 
+    <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
-        isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : "bg-transparent"
+        "fixed w-full top-0 z-50 transition-all duration-300 ",
+        isScrolled
+          ? "py-3 bg-white/80 backdrop-blur-md shadow-sm"
+          : "py-5 bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <a href="#" className="text-xl font-semibold flex items-center">
               <span className="sr-only">Aspyr Technology Labs</span>
-              <img 
-                src="/lovable-uploads/b24e8bd2-03e8-4c5e-accd-1884c4cd7339.png" 
-                alt="Aspyr Technology Labs Logo" 
-                className="h-12 w-auto"
-              />
+              <div className="h-10 mr-2 ml-16">
+                <img
+                  src="/lovable-uploads/logo.png"
+                  alt="Aspyr Logo"
+                  className="h-full"
+                />
+              </div>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-12">
-            {['Services', 'Stories', 'Contact Us'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="text-sm font-medium text-gray-900 hover:text-aspyr-green transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-aspyr-green after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
-              >
-                {item}
-              </a>
-            ))}
+          <nav className="hidden md:flex space-x-12 mr-16 ">
+            {['Services', 'Stories', 'Contact Us'].map((item) => {
+              const id = item.toLowerCase().replace(' ', '-');
+              const isButton = item === 'Contact Us';
+
+              return isButton ? (
+                <a
+                  key={item}
+                  href={`#${id}`}
+                  className="bg-blue-600  hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium"
+                >
+                  {item}
+                </a>
+              ) : (
+                <a
+                  key={item}
+                  href={`#${id}`}
+                  className="text-lg font-medium mt-2 text-gray-900 hover:text-aspyr-green transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-aspyr-green after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                >
+                  {item}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Mobile menu button */}
